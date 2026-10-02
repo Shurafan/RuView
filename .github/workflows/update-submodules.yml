@@ -1,9 +1,9 @@
 name: Update vendor submodules
 
+# Disabled on this fork: schedule was failing every 6h and spamming notifications.
+# Re-enable the cron below if you actually want automated submodule PRs.
 on:
-  schedule:
-    - cron: '0 */6 * * *'  # Every 6 hours
-  workflow_dispatch:        # Manual trigger
+  workflow_dispatch:        # Manual trigger only
 
 permissions:
   contents: write
